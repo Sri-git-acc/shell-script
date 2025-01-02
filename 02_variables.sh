@@ -1,8 +1,8 @@
 #!/bin/bash
 
-PER1=Sri
-PER2=A
-PER3=ANUDEEP
+PER1=$1
+PER2=$2
+PER3=$3
 
 echo "$PER1: Hello $PER2"
 echo "$PER3: Hello $PER1, How are you?"
