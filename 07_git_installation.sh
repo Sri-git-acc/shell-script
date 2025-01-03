@@ -30,7 +30,7 @@ VALIDATE(){
     fi
 }
 
-VALIDATE "git" $? 
+VALIDATE "python" $? 
 VALIDATE "ansible" $?
 
 # dnf list installed git
