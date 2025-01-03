@@ -23,6 +23,7 @@ else
         exit 1
     else   
         echo "git installation is success"
+    fi
 fi
 
 
@@ -38,4 +39,5 @@ else
         exit 1
     else   
         echo "ansible installation is success"
+    fi
 fi
