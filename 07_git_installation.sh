@@ -13,9 +13,9 @@ fi
 VALIDATE(){
 
     dnf list installed $1
-    if [ $3 -eq 0 ]
+    if [ $2 -eq 0 ]
     then 
-        echo "$3"
+        echo "$2"
         echo "$1 already installed and up-to-date"
     else
         dnf install $1 -y
@@ -30,8 +30,8 @@ VALIDATE(){
     fi
 }
 
-VALIDATE "git" $? 0
-VALIDATE "ansible" 0 $?
+VALIDATE "git" $? 
+VALIDATE "ansible" $?
 
 # dnf list installed git
 # if [ $? -eq 0 ]
