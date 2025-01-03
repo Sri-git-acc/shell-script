@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#echo "Enter your number:"
-#read NUM
-NUM=$1
+echo "Enter your number:"
+read NUM
+#NUM=$1
 
 if [ $NUM -gt 100 ]
 then
