@@ -14,7 +14,8 @@ VALIDATE(){
 
     dnf list installed $1
     if [ $2 -eq 0 ]
-    then
+    then 
+        echo "$2"
         echo "$1 already installed and up-to-date"
     else
         dnf install $1 -y
