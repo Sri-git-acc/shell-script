@@ -29,8 +29,8 @@ VALIDATE(){
     fi
 }
 
-VALIDATE() "git" $? 
-VALIDATE() "ansible" $?
+VALIDATE() git $? 
+VALIDATE() ansible $?
 
 # dnf list installed git
 # if [ $? -eq 0 ]
