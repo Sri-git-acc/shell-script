@@ -4,7 +4,7 @@
 USER=$(id -u)
 R="\e[31m"
 G="\e[32m"
-O="\e[33m"
+Y="\e[33m"
 
 #if [ $USER -ne root ]
 if [ $USER -ne 0 ]
@@ -18,16 +18,16 @@ VALIDATE(){
     dnf list installed $1
     if [ $? -eq 0 ]
     then 
-        echo -e "$O $1 already installed and up-to-date"
+        echo -e "$1 already installed and $Y up-to-date"
     else
         dnf install $1 -y
 
         if [ $1 -ne 0 ]
         then   
-            echo -e "$R $1 installation failed"
+            echo -e "$1 installation $R failed"
             exit 1
         else   
-            echo -e "$G $1 installation is success"
+            echo -e "$1 installation is $G success"
         fi
     fi
 }
