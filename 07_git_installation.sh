@@ -11,7 +11,7 @@ then
 fi
 
 dnf list installed git
-if [ $? -e 0 ]
+if [ $? -eq 0 ]
 then
     echo "git already installed and up-to-date"
 else
@@ -28,7 +28,7 @@ fi
 
 
 dnf list installed git
-if [ $? -e 0 ]
+if [ $? -eq 0 ]
 then
     echo "ansible already installed and up-to-date"
 else
