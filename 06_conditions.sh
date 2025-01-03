@@ -4,7 +4,7 @@
 #read NUM
 NUM=$1
 
-if [ $NUM -gt 100]
+if [ $NUM -gt 100 ]
 then
     echo "Given number is greater than 100"
 else
