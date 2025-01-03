@@ -9,5 +9,5 @@ echo "$PER3: Hello $PER1, How are you?"
 echo "$PER1: I'm fine, How are you?"
 echo "$PER3: I'm good."
 echo "$PER1: Please enter your username:"
-read -s USER
+read -s USER # read -s is to hide the content we are inputting
 echo "$PER1: Your username is: $USER"
