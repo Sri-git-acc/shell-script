@@ -30,7 +30,7 @@ VALIDATE(){
 EXISTANCE(){
     if [ $? -ne 0 ]
     then 
-        echo "$2 already exist $Y SKIPPING $N"
+        echo -e "$2 already exist $Y skipping $N"
     else    
         echo "creating $2"
     fi
@@ -39,7 +39,7 @@ EXISTANCE(){
 dnf module disable nodejs -y &>>$LOG_FILE_NAME
 if [ $? -ne 0 ]
 then 
-    echo "nodejs not available... $Y SKIPPING $N"
+    echo -e "nodejs not available... $Y skipping $N"
 else 
     echo "disabled nodejs"
 fi
@@ -74,7 +74,7 @@ VALIDATE $? "backend.service file transfer"
 dnf install mysql -y &>>$LOG_FILE_NAME
 VALIDATE $? "mysql installation"
 
-mysql -h <database.sriyaandansh.fun> -u root -pExpenseApp@1 < /app/schema/backend.sql &>>$LOG_FILE_NAME
+mysql -h database.sriyaandansh.fun -u root -pExpenseApp@1 < /app/schema/backend.sql &>>$LOG_FILE_NAME
 VALIDATE $? "setting up the transactions schema and tables"
 
 systemctl daemon-reload &>>$LOG_FILE_NAME
