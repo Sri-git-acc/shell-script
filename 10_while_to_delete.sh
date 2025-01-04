@@ -6,4 +6,3 @@ do
     rm -rf $file
     echo "Deleted file: $file"
 done 
-#
