@@ -43,7 +43,7 @@ PACKAGE "mysql-server"
 systemctl enable mysqld &>>$LOG_FILE_NAME
 VALIDATE $? "Enabling Mysql server"
 
-systemctl Start mysqld &>>$LOG_FILE_NAME
+systemctl start mysqld &>>$LOG_FILE_NAME
 VALIDATE $? "Starting Mysql server"
  
  mysql_secure_installation --set-root-pass ExpenseApp@1
