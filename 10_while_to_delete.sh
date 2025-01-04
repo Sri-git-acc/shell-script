@@ -1,10 +1,8 @@
 #!/bin/bash
 
-while read -r file 
+while read -r line 
 do
-    echo "Deleting file: $file"
-    rm -rf $file
-    echo "Deleted file: $file"
+    echo $line
 done < 09_delete.sh
 
 # 
