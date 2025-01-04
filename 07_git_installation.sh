@@ -40,6 +40,62 @@ VALIDATE(){
 VALIDATE "python" 
 VALIDATE "ansible"
 
+
+#///////////////////////////////////////////////////////*Phase-2*//////////////////////////////////////////////////
+#!/bin/bash
+
+# USER=$(id -u)
+# if [ $USER -ne 0 ]
+# then   
+#     echo -e "$R ERROR: Please change the user mode to root $N"
+#     exit 1
+# fi
+
+# dnf list installed git
+# if [ $? -eq 0 ]
+# then
+#     echo "git already installed and up-to-date"
+# else
+#     dnf install git -y
+
+#     if [ $? -ne 0 ]
+#     then   
+#         echo "git installation failed"
+#         exit 1
+#     else   
+#         echo "git installation is success"
+#     fi
+# fi
+
+
+# dnf list installed ansible
+# if [ $? -eq 0 ]
+# then
+#     echo "ansible already installed and up-to-date"
+# else
+#     dnf install ansible -y
+#     if [ $? -ne 0 ]
+#     then   
+#         echo "ansible installation failed"
+#         exit 1
+#     else   
+#         echo "ansible installation is success"
+#     fi
+# fi
+
+
+
+#///////////////////////////////////////////////////////*Phase-1*//////////////////////////////////////////////////
+
+#!/bin/bash
+
+#USER=$USER# 
+#if [ $USER -ne root ]
+# then   
+#     echo -e "$R ERROR: Please change the user mode to root $N"
+#     exit 1
+# fi
+
 # dnf list installed git
 # if [ $? -eq 0 ]
 # then
