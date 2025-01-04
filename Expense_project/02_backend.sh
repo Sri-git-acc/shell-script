@@ -6,6 +6,7 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 LOGS_FOLDER="/var/log/shellscript-logs"
+mkdir -p $LOGS_FOLDER
 LOG_FILE=$(echo $0 | cut -d "." -f1)
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
 LOG_FILE_NAME="$LOGS_FOLDER/$LOG_FILE-$TIMESTAMP.log"
@@ -74,7 +75,7 @@ VALIDATE $? "backend.service file transfer"
 dnf install mysql -y &>>$LOG_FILE_NAME
 VALIDATE $? "mysql installation"
 
-mysql -h database.sriyaandansh.fun -u root -pExpenseApp@1 < /app/schema/backend.sql &>>$LOG_FILE_NAME
+mysql -h database.<web url> -u root -p<passwprd> < /app/schema/backend.sql &>>$LOG_FILE_NAME
 VALIDATE $? "setting up the transactions schema and tables"
 
 systemctl daemon-reload &>>$LOG_FILE_NAME

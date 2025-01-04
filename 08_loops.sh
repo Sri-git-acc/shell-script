@@ -26,7 +26,7 @@ VALIDATE(){
     else
         dnf install $package -y &>>$LOG_FILE_NAME
 
-        if [ $1 -ne 0 ]
+        if [ $? -ne 0 ]
         then   
             echo -e "$package installation $R failed $N"
             exit 1
