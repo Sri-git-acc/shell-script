@@ -27,15 +27,6 @@ VALIDATE(){
     fi
 }
 
-dnf module disable nodejs -y &>>$LOG_FILE_NAME
-VALIDATE $? "Disabling nodejs"
-
-dnf module enable nodejs:20 -y &>>$LOG_FILE_NAME
-VALIDATE $? "enablinging nodejs:20"
-
-dnf install nodejs -y &>>$LOG_FILE_NAME
-VALIDATE $? "installing nodejs"
-
 EXISTANCE(){
     if [ $? -ne 0 ]
     then 
@@ -45,8 +36,22 @@ EXISTANCE(){
     fi
 }
 
+dnf module disable nodejs -y &>>$LOG_FILE_NAME
+if [ $? -ne 0 ]
+then 
+    echo "nodejs not available... $Y SKIPPING $N"
+else 
+    echo "disabled nodejs"
+fi
+
+dnf module enable nodejs:20 -y &>>$LOG_FILE_NAME
+VALIDATE $? "enablinging nodejs:20"
+
+dnf install nodejs -y &>>$LOG_FILE_NAME
+VALIDATE $? "installing nodejs"
+
 useradd expense &>>$LOG_FILE_NAME
-EXISTANCE $? "expense username"
+EXISTANCE $? " username expense"
 
 mkdir /app &>>$LOG_FILE_NAME
 EXISTANCE $? "/app directory"
@@ -58,7 +63,7 @@ cd /app
 rm -rf /app/*
 
 unzip /tmp/backend.zip &>>$LOG_FILE_NAME
-EXISTANCE $? "backend.zip"
+VALIDATE $? "backend.zip file unzip"
 
 npm install &>>$LOG_FILE_NAME
 VALIDATE $? "npm installation"
