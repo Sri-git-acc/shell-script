@@ -68,8 +68,8 @@ VALIDATE $? "backend.zip file unzip"
 npm install &>>$LOG_FILE_NAME
 VALIDATE $? "npm installation"
 
-cp /root/ec2-user/shell-script/Expense_project/backend.service /etc/systemd/system/backend.service &>>$LOG_FILE_NAME
-VALIDATE $? "backend.servicefile transfer"
+cp /root/shell-script/Expense_project/backend.service /etc/systemd/system/backend.service &>>$LOG_FILE_NAME
+VALIDATE $? "backend.service file transfer"
 
 dnf install mysql -y &>>$LOG_FILE_NAME
 VALIDATE $? "mysql installation"
