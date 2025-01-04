@@ -6,3 +6,5 @@ do
     rm -rf $file
     echo "Deleted file: $file"
 done < 09_delete.sh
+
+# 
