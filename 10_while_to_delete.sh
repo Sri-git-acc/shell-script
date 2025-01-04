@@ -5,4 +5,3 @@ do
     echo $line
 done < 09_delete.sh
 
-# 
