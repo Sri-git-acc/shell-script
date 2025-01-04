@@ -19,26 +19,26 @@ fi
 
 VALIDATE(){
 
-    dnf list installed $1 &>>$LOG_FILE_NAME
+    dnf list installed $package &>>$LOG_FILE_NAME
     if [ $? -eq 0 ]
     then 
-        echo -e "$1 already installed and $Y up-to-date $N"
+        echo -e "$package already installed and $Y up-to-date $N"
     else
-        dnf install $1 -y &>>$LOG_FILE_NAME
+        dnf install $package -y &>>$LOG_FILE_NAME
 
         if [ $1 -ne 0 ]
         then   
-            echo -e "$1 installation $R failed $N"
+            echo -e "$package installation $R failed $N"
             exit 1
         else   
-            echo -e "$1 installation is $G success $N" 
+            echo -e "$package installation is $G success $N" 
         fi
     fi
 }
 
 for package in $@
 do
-    VALIDATE package
+    VALIDATE $package
 done
 
 
