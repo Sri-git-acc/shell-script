@@ -1,3 +1,5 @@
+#!/bin/bash
+
 while read -r file
 do
     echo "Deleting file: $file"
