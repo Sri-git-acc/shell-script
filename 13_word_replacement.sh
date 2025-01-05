@@ -13,9 +13,10 @@ while read -r line
 do 
     for word in $line
     do
-        if [ word = $WORD ]
-        then
-            sed -i "s|$WORD|$REP|g"
-        fi
+        echo $word
+        # if [ word = $WORD ]
+        # then
+        #     sed -i "s|$WORD|$REP|g"
+        # fi
     done
 done < $FILE_PATH
