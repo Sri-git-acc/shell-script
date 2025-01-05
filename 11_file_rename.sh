@@ -11,7 +11,7 @@ do
     echo "renaming file: $file"
     F1=$($file | cut -d "/" -f4)
     F2=$($TIMESTAMP_$F1)
-    mv $file $F2
+    mv $F1 $F2
 done <<< $FILE_NAME
 
 
