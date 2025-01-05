@@ -9,13 +9,15 @@ read -r WORD
 echo "Enter the word to replace with:"
 read -r REP
 
-while read -r line
-do 
-    for word in $line
-    do
-        if [ $word = $WORD ]
-        then
-            sed "s|$WORD|$REP|"    
-        fi
-    done
-done < $FILE_PATH
+echo sed -i "s|$WORD|$REP|" $FILEPATH
+
+# while read -r line
+# do 
+#     for word in $line
+#     do
+#         if [ $word = $WORD ]
+#         then
+#             sed "s|$WORD|$REP|"    
+#         fi
+#     done
+# done < $FILE_PATH
