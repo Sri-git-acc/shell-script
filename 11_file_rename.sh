@@ -6,7 +6,7 @@ echo "files to rename: $FILE_NAME"
 TIMESTAMP=$(date +%Y-%m-%d)
 echo $TIMESTAMP
 F1=$($FILENAME | cut -d "/" -f5)
-echo F1
+echo $F1
 
 # while read -r file
 # do  
