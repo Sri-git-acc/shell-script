@@ -8,7 +8,7 @@ do
     for word in $line
     do
         REVER=$(echo $word | rev)
-        echo $REVER
+        echo "$word ---> $REVER"
         # if [ $REVER -eq $word ]
         # then  
         #     echo $word
