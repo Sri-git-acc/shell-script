@@ -17,5 +17,5 @@ do
         echo "$word"
         RES=$(LIN >> $word)
     done
-echo $LIN    
+echo $RES    
 done < $FILENAME
