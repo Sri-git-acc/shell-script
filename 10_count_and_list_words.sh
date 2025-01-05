@@ -17,5 +17,3 @@ do
     LIN=$wor
 echo LIN
 done < $FILENAME
-
-
