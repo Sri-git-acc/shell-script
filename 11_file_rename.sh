@@ -2,7 +2,8 @@
 
 PATH="/home/ec2-user"
 FILES=$(find $PATH -name "*.log")
-TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
+echo "files to rename: $FILES"
+TIMESTAMP=$(date +%Y-%m-%d)
 
 while read -r file
 do  
