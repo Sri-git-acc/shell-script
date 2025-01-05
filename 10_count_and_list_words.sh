@@ -3,8 +3,8 @@
 echo "Please enter your file name:"
 read -r FILENAME
 echo "Filename = $FILENAME"
-
-echo -e "word count of $FILENAME is: wc -w $FILENAME"
+COUNT=$(wc -w $FILENAME)
+echo -e "word count of $FILENAME is: $COUNT"
 
 while read -r line;
 do
