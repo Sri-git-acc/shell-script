@@ -13,6 +13,6 @@ do
         COUNT=COUNT+1
         echo "$word"
     done
-    echo "Number of wordsare: COUNT"
+    echo "Number of wordsare: $COUNT"
 done <<< $FILENAME
 
