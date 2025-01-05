@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SOURCE_DIR="/home/ec2-user/shell-script"
+SOURCE_DIR="/home/ec2-user"
 FILE_NAME=$(find $SOURCE_DIR -name "*.log")
 # echo "files to rename: $FILE_NAME"
 TIMESTAMP=$(date +%Y-%m-%d)
@@ -10,7 +10,7 @@ while read -r file
 do  
     cd /home/ec2-user/shell-script
     echo "renaming file: $file"
-    F1=$(echo $file | cut -d "/" -f5)
+    F1=$(echo $file | cut -d "/" -f4)
     # echo $F1
     F2=$SOURCE_DIR/$TIMESTAMP-$F1
     # echo $F2
