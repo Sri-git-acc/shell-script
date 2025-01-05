@@ -15,7 +15,6 @@ do
     for word in $line;
     do
         echo "$word"
-        RES=$(LIN >> $word)
-    done
-echo $RES    
+        uniq -c $word
+    done    
 done < $FILENAME
