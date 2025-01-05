@@ -15,7 +15,7 @@ do
     do
         if [ $word = $WORD ]
         then
-            sed -i "s|$WORD|$REP|g"
+            sed "s|$WORD|$REP|g"
         fi
     done
 done < $FILE_PATH
