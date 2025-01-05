@@ -10,7 +10,7 @@ while read -r line;
 do
     for word in $line;
     do
-        COUNT=COUNT+1
+        COUNT++
         echo "$word"
     done
     echo "Number of wordsare: $COUNT"
