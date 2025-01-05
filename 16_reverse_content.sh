@@ -7,4 +7,4 @@ FILE=$(echo $FILE_PATH | cut -d "/" -f4)
 
 REVER=$(cat $FILE_PATH | rev)
 touch /etc/$TIMESTAMP-reverse-$FILE
-mv $REVER /etc/$TIMESTAMP-reverse-$FILE
+mv $REVER /etc/reverse/$TIMESTAMP-$FILE
