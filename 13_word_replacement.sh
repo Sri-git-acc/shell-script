@@ -14,9 +14,10 @@ do
     for word in $line
     do
         echo $word
-        # if [ word = $WORD ]
-        # then
-        #     sed -i "s|$WORD|$REP|g"
-        # fi
+        if [ word = $WORD ]
+        then
+            echo $word
+            # sed -i "s|$WORD|$REP|g"
+        fi
     done
 done < $FILE_PATH
