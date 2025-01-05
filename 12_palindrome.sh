@@ -8,9 +8,10 @@ do
     for word in $line
     do
         REVER=$(echo $word | rev)
-        if [$REVER -eq $word]
-        then  
-            echo $word
-        fi
+        echo $REVER
+        # if [ $REVER -eq $word ]
+        # then  
+        #     echo $word
+        # fi
     done
 done < $FILENAME
