@@ -9,7 +9,7 @@ read -r WORD
 echo "Enter the word to replace with:"
 read -r REP
 
-echo sed -i "s|$WORD|$REP|" $FILEPATH
+sed -i "s|$WORD|$REP|" $FILEPATH
 
 # while read -r line
 # do 
