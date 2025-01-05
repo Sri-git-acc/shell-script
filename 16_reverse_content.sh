@@ -6,5 +6,5 @@ TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
 FILE=$(echo $FILE_PATH | cut -d "/" -f4)
 
 REVER=$(cat $FILE_PATH | rev)
-touch /etc/$TIMESTAMP-reverse-$FILE
-mv $REVER /etc/reverse/$TIMESTAMP-$FILE
+mkdir /tmp/reverse
+mv $REVER /tmp/reverse/$TIMESTAMP-$FILE
