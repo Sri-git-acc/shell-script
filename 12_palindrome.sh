@@ -9,8 +9,8 @@ do
     do
         REVER=$(echo $word | rev)
         if[ $REVER -eq $word ]
-        do  
+        then  
             echo "$word"
-        done
+        fi
     done
 done < $FILENAME
