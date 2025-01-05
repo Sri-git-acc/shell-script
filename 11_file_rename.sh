@@ -11,8 +11,8 @@ do
     cd /home/ec2-user/shell-script
     echo "renaming file: $file"
     F1=$($file | cut -d "/" -f5)
-    F2=$($TIMESTAMP_$F1)
-    mv $F1 $F2
+    F2=$($SOURCE_DIR/$TIMESTAMP_$F1)
+    mv $file $F2
 done <<< $FILE_NAME
 
 
