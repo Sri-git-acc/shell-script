@@ -8,13 +8,13 @@ echo "Filename = $FILE"
 COUNT=$(wc -w < $FILENAME)
 echo -e "Total word count of $FILE is: $COUNT"
 
-while read -r line;
+while read -r word;
 do
-    for word in $line;
+    for wor in $word;
     do
-        echo "$word"
+        echo "$wor"
     done
-    LIN=$word
+    LIN=$wor
 echo LIN
 done < $FILENAME
 
