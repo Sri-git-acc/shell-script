@@ -14,6 +14,6 @@ do
     do
         echo "$each"
     done
-done <<< $FILENAME
+done < $FILENAME
 
 
