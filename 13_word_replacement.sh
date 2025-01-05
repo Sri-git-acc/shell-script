@@ -13,7 +13,6 @@ while read -r line
 do 
     for word in $line
     do
-        echo $word
         if [ $word = $WORD ]
         then
             echo $word
