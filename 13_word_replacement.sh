@@ -14,7 +14,7 @@ do
     for word in $line
     do
         echo $word
-        if [ word = $WORD ]
+        if [ $word = $WORD ]
         then
             echo $word
             # sed -i "s|$WORD|$REP|g"
