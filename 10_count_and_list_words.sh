@@ -14,6 +14,8 @@ do
     do
         echo "$word"
     done
+    LIN=$word
+echo LIN
 done < $FILENAME
 
 
