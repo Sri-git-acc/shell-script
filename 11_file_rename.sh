@@ -7,7 +7,8 @@ TIMESTAMP=$(date +%Y-%m-%d)
 
 while read -r file
 do  
-    mv $($SOURCE_DIR/$file) $($SOURCE_DIR/$TIMESTAMP_$file)
+    echo "renaming file: $file
+    mv $SOURCE_DIR/$file $SOURCE_DIR/$TIMESTAMP_$file
 done < $FILE_NAME
 
 
