@@ -6,12 +6,13 @@ echo "Filename = $FILENAME"
 
 COUNT=0
 
-while read -r line
+while read -r line;
 do
-    for word in $line
+    for word in $line;
     do
         COUNT=COUNT+1
         echo "$word"
     done
+    echo "Number of wordsare: COUNT"
 done <<< $FILENAME
 
