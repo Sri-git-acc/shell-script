@@ -9,4 +9,4 @@ do
         F1=(wc -c $word)
         echo "Word count of $word is: $F1"
     done
-done < FILE_PATH
+done < $FILE_PATH
