@@ -15,4 +15,4 @@ do
         fi
     done
 done < $FILE_PATH
-echo "Longest word is: $WOR"
+echo "Longest word is: $WOR with $COUNT char length"
