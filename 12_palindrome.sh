@@ -1,6 +1,6 @@
 #!/bin/bash
 
-Please enter the file name with path:
+echo "Please enter the file name with path:"
 read -r FILENAME
 
 while read -r line
