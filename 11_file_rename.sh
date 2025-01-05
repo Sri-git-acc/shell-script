@@ -10,7 +10,7 @@ do
     echo "renaming file: $file"
     F1=$($file | cut -d "/" -f4)
     F2=$($SOURCE_DIR/$TIMESTAMP_$F1)
-    mv $file F2
+    mv $file $F2
 done <<< $FILE_NAME
 
 
