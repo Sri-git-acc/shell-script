@@ -15,6 +15,7 @@ do
             WOR=$word
             echo $COUNT
         fi
-        # echo "Longest word is: $WOR"
+        
     done
 done < $FILE_PATH
+echo "Longest word is: $WOR"
