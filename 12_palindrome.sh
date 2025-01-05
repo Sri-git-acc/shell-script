@@ -9,7 +9,7 @@ do
     do
         REVER=$(echo $word | rev)
         # echo "$word ---> $REVER"
-        if [ $REVER -eq $word ]
+        if [ $REVER = $word ]
         then  
             echo $REVER
         fi
