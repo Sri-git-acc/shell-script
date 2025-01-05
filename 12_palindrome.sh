@@ -10,7 +10,7 @@ do
         REVER=$(echo $word | rev)
         if[ $REVER -eq $word ]
         then  
-            echo "$word"
+            echo $word
         fi
     done
 done < $FILENAME
