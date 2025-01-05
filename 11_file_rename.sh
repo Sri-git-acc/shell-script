@@ -13,7 +13,7 @@ do
     F1=$(echo $file | cut -d "/" -f5)
     # echo $F1
     F2=$SOURCE_DIR/$TIMESTAMP-$F1
-    echo $F2
+    # echo $F2
     mv $file $F2
 done <<< $FILE_NAME
 
