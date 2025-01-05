@@ -13,5 +13,5 @@ do
         COUNT=COUNT+1
         echo "$word"
     done
-done < $FILENAME
+done < "$FILENAME"
 
