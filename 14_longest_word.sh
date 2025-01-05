@@ -6,7 +6,14 @@ while read -r line
 do
     for word in $line
     do
+        COUNT=0
         F1=${#word}
-        echo "Word count of $word is: $F1"
+        # echo "Word count of $word is: $F1"
+        if [ $F1 -gt $COUNT ]
+        then
+            COUNT=$F1
+            WOR=$word
+        fi
     done
+    echo "Longest word is: $WOR"
 done < $FILE_PATH
