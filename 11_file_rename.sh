@@ -7,7 +7,7 @@ TIMESTAMP=$(date +%Y-%m-%d)
 
 while read -r file
 do  
-    cd /home/ec2-user
+    cd /home/ec2-user/shell-script
     echo "renaming file: $file"
     F1=$($file | cut -d "/" -f5)
     F2=$($TIMESTAMP_$F1)
