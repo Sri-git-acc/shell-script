@@ -17,9 +17,11 @@ do
     # sort $line | uniq -c
     for word in $line;
     do
-        # echo "$word"
-        echo -e $(sort | uniq -c < $word)
-    done    
+        # echo "$word" 
+        $word
+    done
+    SO=$(sort | uniq -c < $word)
+    echo $SO    
 done < $FILE_PATH
 
 # ////////////////////////////////////////////////////////PENDING//////////////////////////////////////////////////////
