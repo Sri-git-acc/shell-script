@@ -10,13 +10,14 @@ echo -e "Total word count of $FILE_PATH is: $COUNT"
 
 while read -r line;
 do
+    RES=$(sort | uniq -c)
+    echo $RES
     # sort $line | uniq -c
-    for word in $line;
-    do
-        # echo "$word"
-        RES=$(sort | uniq -c)
-        echo $RES
-    done    
+    # for word in $line;
+    # do
+    #     # echo "$word"
+        
+    # done    
 done < $FILE_PATH
 
 # ////////////////////////////////////////////////////////PENDING//////////////////////////////////////////////////////
