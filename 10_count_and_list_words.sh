@@ -18,7 +18,7 @@ do
     for word in $line;
     do
         # echo "$word"
-        sort | uniq -c <$word
+        echo $(sort | uniq -c <$word)
     done    
 done < $FILE_PATH
 
