@@ -9,11 +9,11 @@ COUNT=$(wc -w < $FILE_PATH)
 echo -e "Total word count of $FILE_PATH is: $COUNT"
 # echo $(sort $FILE_PATH | uniq -w)
 
-while read -r wordline;
+while read -r line;
 do
     # RES=$(sort | uniq -c)
     # echo $RES
-    echo $line
+    # echo $line
     # sort $line | uniq -c
     for word in $line;
     do
