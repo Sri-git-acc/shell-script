@@ -5,6 +5,7 @@ read -r FILE_PATH
 
 echo "Filename = $FILE_PATH"
 COUNT=$(wc -w < $FILENAME)
+echo $COUNT
 echo -e "Total word count of $FILE_PATH is: $COUNT"
 
 # while read -r line;
