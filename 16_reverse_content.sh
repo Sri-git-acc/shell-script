@@ -7,9 +7,9 @@ FILE=$(echo $FILE_PATH | cut -d "/" -f4)
 
 REVER=$(cat $FILE_PATH | rev)
 echo $REVER
-# mkdir -p /home/ec2-user/reverse
-# touch /home/ec2-user/reverse/$FILE
-# cp $REVER /home/ec2-user/reverse/$FILE
+mkdir -p /home/ec2-user/reverse
+touch /home/ec2-user/reverse/$FILE
+cp $FILE_PATH /home/ec2-user/reverse/$FILE
 
 
 
