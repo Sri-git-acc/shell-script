@@ -7,7 +7,7 @@ read -r FILE_PATH
 # COUNT=$(wc -w < $FILE_PATH)
 COUNT=$(wc -w < $FILE_PATH)
 echo -e "Total word count of $FILE_PATH is: $COUNT"
-RES=$(tr -s '[:space:]' '\n' < $FILE_PATH \n| sort | uniq -c)
+RES=$(tr -s '[:space:]' '\n' < $FILE_PATH | sort "\n"| uniq -c)
 echo $RES
 
 # echo $(sort $FILE_PATH | uniq -w)
