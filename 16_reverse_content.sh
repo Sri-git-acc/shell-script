@@ -6,8 +6,8 @@ TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
 FILE=$(echo $FILE_PATH | cut -d "/" -f4)
 
 REVER=$(cat $FILE_PATH | rev)
-mkdir /tmp/reverse
-cp $REVER /tmp/reverse/$TIMESTAMP-$FILE.txt
+mkdir -p /home/ec2-user/reverse
+cp $REVER /home/ec2-user/reverse/$TIMESTAMP-$FILE
 
 
 
