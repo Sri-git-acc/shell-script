@@ -6,7 +6,7 @@ TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
 FILE=$(echo $FILE_PATH | cut -d "/" -f4)
 
 mkdir -p /home/ec2-user/reverse
-REVER=$(cat $FILE_PATH | rev) &>>/home/ec2-user/reverse/$FILE
+cat $FILE_PATH | rev &>>/home/ec2-user/reverse/$FILE
 
 
 
