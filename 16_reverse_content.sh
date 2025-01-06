@@ -7,7 +7,7 @@ FILE=$(echo $FILE_PATH | cut -d "/" -f4)
 
 REVER=$(cat $FILE_PATH | rev)
 mkdir -p /home/ec2-user/reverse
-cp $REVER /home/ec2-user/reverse/$TIMESTAMP-$FILE
+cp $REVER /home/ec2-user/reverse/$FILE-$TIMESTAMP
 
 
 
