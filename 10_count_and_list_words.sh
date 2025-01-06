@@ -14,7 +14,9 @@ do
     for word in $line;
     do
         # echo "$word"
-        # sort | uniq -c
+        # RES=$(sort | uniq -c)
+        # echo $RES
+        echo "hi"
     done    
 done < $FILE_PATH
 
