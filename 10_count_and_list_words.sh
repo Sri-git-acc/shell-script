@@ -7,18 +7,19 @@ read -r FILE_PATH
 # COUNT=$(wc -w < $FILE_PATH)
 COUNT=$(wc -w < $FILE_PATH)
 echo -e "Total word count of $FILE_PATH is: $COUNT"
+echo $(sort $FILE_PATH | uniq -w)
 
-while read -r word;
-do
-    # RES=$(sort | uniq -c)
-    # echo $RES
-    echo $word
-    # sort $line | uniq -c
-    # for word in $line;
-    # do
-    #     # echo "$word"
+# while read -r wordline;
+# do
+#     # RES=$(sort | uniq -c)
+#     # echo $RES
+#     echo $line
+#     # sort $line | uniq -c
+#     # for word in $line;
+#     # do
+#     #     # echo "$word"
         
-    # done    
-done < $FILE_PATH
+#     # done    
+# done < $FILE_PATH
 
 # ////////////////////////////////////////////////////////PENDING//////////////////////////////////////////////////////
