@@ -1,23 +1,18 @@
 #!/bin/bash
 
-echo "Please enter your file name:"
-read -r FILE
-FILEPATH="/home/ec2-user"
-FILENAME=$FILEPATH/$FILE
-echo "Filename = $FILE"
+echo "Please enter your file name with path:"
+read -r FILE_PATH
+
+echo "Filename = $FILE_PATH"
 COUNT=$(wc -w < $FILENAME)
-echo -e "Total word count of $FILE is: $COUNT"
+echo -e "Total word count of $FILE_PATH is: $COUNT"
 
-LIN=()
+# while read -r line;
+# do
+#     for word in $line;
+#     do
+#         echo "$word"
+#     done    
+# done < $FILENAME
 
-VALIDATE() {
-    while read -r line;
-    do
-        for word in $line;
-        do
-            echo "$word"
-        done    
-    done < $FILENAME
-}
-
-uniq -c < $VALIDATE
+# ////////////////////////////////////////////////////////PENDING//////////////////////////////////////////////////////
