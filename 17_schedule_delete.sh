@@ -32,7 +32,7 @@ FILES=$(find $SOURCE_PATH -name "*.log" -mtime +$FILE_AGE)
 
 if [ -n "$FILES" ]
 then
-    echo "Deleting file or files are: $FILES"
+    echo "Deleting file or files are: /n $FILES"
 fi
 
 
