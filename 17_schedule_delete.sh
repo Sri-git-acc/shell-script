@@ -43,7 +43,7 @@ then
         do
             rm -rf $dfile
             echo "Deleted $dfile"
-        done < $FILES
+        done <<< $FILES
     else 
         echo "Unable to zip file"
         exit 1
