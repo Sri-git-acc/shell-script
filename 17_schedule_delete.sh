@@ -28,7 +28,7 @@ VALIDATION() {
 VALIDATION $SOURCE_PATH
 VALIDATION $DEST_PATH
 
-FILES=$(find $SOURCE_PATH -name "*.log" -mtime +$FILEAGE)
+FILES=$(find $SOURCE_PATH -name "*.log" -mtime +$FILE_AGE)
 
 if [ -n $FILES ]
 then
