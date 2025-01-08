@@ -14,14 +14,15 @@ read -r $DEST_PATH
 echo "Please enter the age of older files:"
 read -r $FILE_AGE
 
-VALIDATION(){
+VALIDATION() {
     if [! -d $1 ]
     then
-        echo -e "$SOURCE_PATH $R path is not valid $N"
+        echo -e "$1 $R path is not valid $N"
         exit 1
     fi
 }
+echo $SOURCE_PATH
 
-VALIDATION $SOURCE_FILE
-VALIDATION $DEST_FILE
+VALIDATION $SOURCE_PATH
+VALIDATION $DEST_PATH
 
