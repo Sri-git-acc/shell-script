@@ -5,6 +5,7 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
+LOG_FILE= $(echo $0 | awk -F "/" '{print $NF}' | cut -d "." -f1)
 
 echo "Please enter your source path:"
 read -r SOURCE_PATH
@@ -32,7 +33,9 @@ FILES=$(find $SOURCE_PATH -name "*.log" -mtime +$FILE_AGE)
 
 if [ -n "$FILES" ]
 then
-    echo "Deleting file or files are: /n $FILES"
+    echo "Deleting file or files are: $FILES"
 fi
+
+echo $LOG_FILE
 
 
