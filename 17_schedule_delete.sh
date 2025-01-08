@@ -4,6 +4,7 @@ R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
+TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
 
 echo "Please enter your source path:"
 read -r SOURCE_PATH
@@ -26,4 +27,12 @@ VALIDATION() {
 
 VALIDATION $SOURCE_PATH
 VALIDATION $DEST_PATH
+
+FILES=$(find $SOURCE_PATH -name "*.log" -mtime +$FILEAGE)
+
+if [ -n $FILES ]
+then
+    echo "Deleting file or files are: $FILES"
+fi
+
 
