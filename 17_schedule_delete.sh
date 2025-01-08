@@ -46,6 +46,8 @@ then
         done < $FILES
     else 
         echo "Unable to zip file"
+        exit 1
+    fi
 else
     echo "No file/files greater than $FILE_AGE days are found"
 fi
