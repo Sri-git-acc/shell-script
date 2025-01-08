@@ -6,13 +6,15 @@ Y="\e[33m"
 N="\e[0m"
 
 echo "Please enter your source path:"
-read -r $SOURCE_PATH
+read -r SOURCE_PATH
+
+echo
 
 echo "Please enther your destination path"
-read -r $DEST_PATH
+read -r DEST_PATH
 
 echo "Please enter the age of older files:"
-read -r $FILE_AGE
+read -r FILE_AGE
 
 VALIDATION() {
     if [ ! -d "$1" ]
@@ -21,7 +23,6 @@ VALIDATION() {
         exit 1
     fi
 }
-echo $SOURCE_PATH
 
 VALIDATION $SOURCE_PATH
 VALIDATION $DEST_PATH
