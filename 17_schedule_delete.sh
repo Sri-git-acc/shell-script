@@ -30,7 +30,7 @@ VALIDATION $DEST_PATH
 
 FILES=$(find $SOURCE_PATH -name "*.log" -mtime +$FILE_AGE)
 
-if [ -n $FILES ]
+if [ -n "$FILES" ]
 then
     echo "Deleting file or files are: $FILES"
 fi
