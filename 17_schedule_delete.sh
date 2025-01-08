@@ -15,7 +15,7 @@ echo "Please enter the age of older files:"
 read -r $FILE_AGE
 
 VALIDATION() {
-    if [! -d $1 ]
+    if [! -d "$1" ]
     then
         echo -e "$1 $R path is not valid $N"
         exit 1
